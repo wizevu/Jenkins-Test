@@ -9,10 +9,9 @@ node('master') {
        }
 
        stage('build'){
-            /*sh 'curl -Os https://nodejs.org/dist/v6.3.0/node-v6.3.0-linux-x64.tar.gz'
+            sh 'curl -Os https://nodejs.org/dist/v6.3.0/node-v6.3.0-linux-x64.tar.gz'
             sh 'tar xvfz node-v6.3.0-linux-x64.tar.gz >tar_explode.log'
-            sh 'PATH=$WORKSPACE/node-v6.3.0-linux-x64/bin:$PATH'*/
-            sh 'sudo apt-get install node'
+            sh 'PATH=$WORKSPACE/node-v6.3.0-linux-x64/bin:$PATH'
             sh 'npm install'
             sh 'npm install --save --dev retire'
        }
